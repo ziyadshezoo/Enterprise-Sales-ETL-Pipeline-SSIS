@@ -46,5 +46,24 @@ The pipeline automates:
 * **Derived Column Transformation:** Injects real-time business logic using explicit casting and the `DATEDIFF` interval function:
   ```text
   DATEDIFF("yy", (DT_DATE)[Birth_Date], (DT_DATE)[Purchase_Date])
-🗄️ Database Schema & Dimensional ModelingThe project implements a Star Schema optimized for downstream analytical queries and BI reports.Data Warehouse Tables:Table NameTypeKey ColumnsDescriptionDim_CustomersDimensionCust_Key (PK)Stores master customer profiles and demographics.Fact_SalesFactTransaction_ID (PK), Cust_Key (FK)Captures clean operational sales metrics and calculated values.Error_Unknown_CustomersAudit / LogNoneIsolates broken or unvalidated records for business intelligence auditing.🚀 How To Run & TestClone the repository:Bashgit clone [https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git](https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git)
-Setup the Database: Run the SQL scripts provided in the /Scripts folder on your local SQL Server instance to generate the schema.Configure SSIS Connection Managers: Update the OLE DB connection string within Visual Studio to point to your local server instance (DESKTOP-UHB9RTR).Place Sample Data: Drop the branch .csv files into your designated directory.Execute: Hit Start in Visual Studio to watch the blocks light up green! ✅
+---
+
+## 🗄️ Database Schema & Dimensional Modeling
+
+The project implements a **Star Schema** optimized for downstream analytical queries and BI reports.
+
+### Data Warehouse Tables:
+
+| Table Name | Type | Key Columns | Description |
+| :--- | :--- | :--- | :--- |
+| **`Dim_Customers`** | Dimension | `Cust_Key` (PK) | Stores master customer profiles and demographics. |
+| **`Fact_Sales`** | Fact | `Transaction_ID` (PK), `Cust_Key` (FK) | Captures clean operational sales metrics and calculated values. |
+| **`Error_Unknown_Customers`** | Audit / Log | None | Isolates broken or unvalidated records for business intelligence auditing. |
+
+---
+
+## 🚀 How To Run & Test
+
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git](https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git)
