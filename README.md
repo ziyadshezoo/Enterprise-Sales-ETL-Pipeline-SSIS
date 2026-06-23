@@ -8,7 +8,7 @@ An enterprise-grade, end-to-end Data Integration (ETL) pipeline designed to auto
 
 > 💡 **System Architecture Design:** Below is the complete visual design mapping both the orchestration layer (Control Flow) and the ingestion pipeline (Data Flow).
 
-![Data Pipeline Architecture Blueprint](Workflow Diagram.png)
+![Data Pipeline Architecture Blueprint](Workflow_Diagram.png)
 
 ---
 
