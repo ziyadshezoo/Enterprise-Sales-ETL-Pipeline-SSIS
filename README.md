@@ -60,10 +60,4 @@ The project implements a **Star Schema** optimized for downstream analytical que
 | **`Fact_Sales`** | Fact | `Transaction_ID` (PK), `Cust_Key` (FK) | Captures clean operational sales metrics and calculated values. |
 | **`Error_Unknown_Customers`** | Audit / Log | None | Isolates broken or unvalidated records for business intelligence auditing. |
 
----
 
-## 🚀 How To Run & Test
-
-1. **Clone the repository:**
-```bash
-   git clone [https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git](https://github.com/ziyadshezoo/Enterprise-Sales-ETL-Pipeline-SSIS.git)
